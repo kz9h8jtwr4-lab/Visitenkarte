@@ -304,5 +304,26 @@
     <p class="footnote">SONNENSCHUTZ E'FÖRDE</p>
   </div>
 
+<script>
+(function(){
+  var vcard = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    'N:Kuthning;Christopher;;;',
+    'FN:Christopher Kuthning',
+    "ORG:Sonnenschutz E'förde",
+    'TITLE:Beratung & Verkauf von innenliegendem, maßgefertigtem Sonnenschutz',
+    'NOTE:Plissees - Jalousien - Insektenschutz und mehr',
+    'TEL;TYPE=CELL,VOICE:+49 170 9070541',
+    'EMAIL;TYPE=INTERNET:kontakt@sonnenschutz-efoerde.de',
+    'END:VCARD'
+  ].join('\r\n');
+
+  var blob = new Blob([vcard], {type: 'text/vcard'});
+  var url = URL.createObjectURL(blob);
+  document.getElementById('saveContact').setAttribute('href', url);
+})();
+</script>
+
 </body>
 </html>
